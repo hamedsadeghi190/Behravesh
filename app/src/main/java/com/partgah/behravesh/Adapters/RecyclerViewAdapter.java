@@ -1,7 +1,6 @@
 package com.partgah.behravesh.Adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.partgah.behravesh.Models.CategoryModel;
 import com.partgah.behravesh.R;
 
@@ -50,10 +50,8 @@ public class RecyclerViewAdapter  extends  RecyclerView.Adapter<RecyclerViewAdap
         public void setData(CategoryModel item) {
             this.item = item;
 
-            textView.setText(item.text);
-            imageView.setImageResource(item.drawable);
-            relativeLayout.setBackgroundColor(Color.parseColor(item.color));
-
+            textView.setText(item.name);
+            Glide.with(mContext).load(item.image).into(imageView);
         }
 
 

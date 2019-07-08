@@ -16,6 +16,7 @@ import com.partgah.behravesh.ViewModels.CategoryViewModel;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class CategoryActivity extends AppCompatActivity {
 
@@ -26,10 +27,12 @@ public class CategoryActivity extends AppCompatActivity {
 
     CategoryViewModel cViewModel;
     RecyclerViewAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+        ButterKnife.bind(this);
         initViewModel();
         initRecycleView();
 
@@ -42,20 +45,16 @@ public class CategoryActivity extends AppCompatActivity {
 
     private void initRecycleView() {
 
-        RecyclerViewAdapter.ItemListener listener = item -> {        };
+        RecyclerViewAdapter.ItemListener listener = item -> {
+        };
 
         final Observer<ArrayList<CategoryModel>> observer = categoryModels -> {
-            if (arrayList.isEmpty()) {
 
-                adapter  = new RecyclerViewAdapter(this, categoryModels, listener);
-                recyclerView.setAdapter(adapter);
-
-                AutoFitGridLayoutManager layoutManager = new AutoFitGridLayoutManager(this, 300);
-                recyclerView.setLayoutManager(layoutManager);
-            }
-            else{
-                adapter.notifyDataSetChanged();
-            }
+            adapter = new RecyclerViewAdapter(this, categoryModels, listener);
+            recyclerView.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
+            AutoFitGridLayoutManager layoutManager = new AutoFitGridLayoutManager(this, 300);
+            recyclerView.setLayoutManager(layoutManager);
         };
         cViewModel.CategoryModelLiveData.observe(this, observer);
         cViewModel.GetCategories();

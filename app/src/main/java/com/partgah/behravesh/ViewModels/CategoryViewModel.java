@@ -20,12 +20,13 @@ public class CategoryViewModel extends AndroidViewModel {
         super(application);
     }
 
-    public void  GetCategories()
-    {
+    public void GetCategories() {
         WebServicelistener servicelistener = new WebServicelistener() {
             @Override
             public void OnComplete(Object object) {
-
+                ArrayList<CategoryModel> categoryModels = (ArrayList<CategoryModel>) object;
+                CategoryModelLiveData.postValue(null);
+                CategoryModelLiveData.postValue(categoryModels);
             }
 
             @Override
@@ -33,6 +34,6 @@ public class CategoryViewModel extends AndroidViewModel {
 
             }
         };
-      new CategoryRepostiroy().GetCategories(servicelistener);
+        new CategoryRepostiroy().GetCategories(servicelistener);
     }
 }
