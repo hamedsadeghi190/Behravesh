@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Behravesh</string>
+    <string name="copyright_2019">Copyright @2019 by jambod.com, All rights reserved.</string>
+    <string name="client_id">locationer-1252565911925898911</string>
+    <string name="client_secret">by_qemxvY2F0aW9uZXLVqjYLZZj2BiM1mrolw4k613EP9DeVKKJuvD495ovdMg==</string>
+    <string name="map_ir_token">eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjhiZjdkNzdjMDllMmZkZWUyMzlhMWMzZDJlMzdjNWFjNmRiNmEyZWYxODJjZDU5NTg2MzA5YzM0OGQ2MmY2ZTBlZDczOWYxOGJlNDBkNTQ5In0.eyJhdWQiOiJteWF3ZXNvbWVhcHAiLCJqdGkiOiI4YmY3ZDc3YzA5ZTJmZGVlMjM5YTFjM2QyZTM3YzVhYzZkYjZhMmVmMTgyY2Q1OTU4NjMwOWMzNDhkNjJmNmUwZWQ3MzlmMThiZTQwZDU0OSIsImlhdCI6MTU2MTIwMTUxNCwibmJmIjoxNTYxMjAxNTE0LCJleHAiOjE1NjEyMDUxMTQsInN1YiI6IiIsInNjb3BlcyI6WyJiYXNpYyIsImVtYWlsIl19.m0zVxzEt4XEfd8tM0oD2cQmR4sJxMszKwR6mT2yP46q9WoVLA0JxXCd6ubA4joyFBCv-7QBAc5NaqRgnNayNBW5jCSDgS6aUPR65nmdN7JH6z7ukgcwyESqoPYcWzSNtyMmjt_hgYEQ32TtZ96auTsHtdnx8ILKU-7MNRZPd1izSjRALrccQfsZ5XqzpCcRnZ3AvqOw_RIV3GfuWZKT7Sp80y_c_fbKgROupZmwbVSB_apTL-trPdHySrf-qmpGrr0soQVnmay9P0fUGCTsCmSy9_Nk9W42MXxV_6958glhcbgvOrdrCy8oqAJKsmC7cxtiCDuFwQw_uRBYVU6QYXg</string>
+    <string name="province">استان</string>
+    <string name="comma">،</string>
+    <string name="Address">آدرس </string>
+    <string name="bazyaft_sanati">تحویل بازیافت صنعتی</string>
+    <string name="bazyaft_khanegi">تحویل بازیافت خانگی</string>
+
+
+    <string-array name="stepviews">
+        <item>سطلم پرشده</item>
+        <item>یافتن کارگزار</item>
+        <item>تایید وزن</item>
+        <item>پایان</item>
+    </string-array>
+</resources>
